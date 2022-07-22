@@ -1,0 +1,150 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Amaranth', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    scroll-behavior: smooth;
+}
+
+nav {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(132, 112, 255, 60%);
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: midnightblue;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.fundo1 {
+    background-image: url("../Imagens/PlanoFundo01.jpg");
+}
+.fundo2 {
+    background-image: url("../Imagens/PlanoFundo02.jpg");
+}
+.fundo3 {
+    background-image: url("../Imagens/PlanoFundo03.jpg");
+}
+
+.fundo1, .fundo2, .fundo3{
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.destaque {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    color: midnightblue;
+    background-color: powderblue;
+    padding: 10px;
+    width: 40%;
+    font-size: 1rem;
+    filter: drop-shadow(4px 4px mistyrose);
+    margin: auto;
+}
+
+.conteudo {
+    color: indigo;
+    background-color: lightcyan;
+    padding: 90px 25px;
+}
+
+.texto {
+    text-align: justify;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: dodgerblue;
+}
+
+img {
+    width: 100%;
+}
+
+.filmagem {
+    width: 90%;
+    border: 8px inset lightsteelblue;
+}
+
+.quadro_animado {
+    width: 310px;
+    height: 200px;
+    margin: auto;
+    background-size: cover;
+    border-radius: 5%;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-name: muda_imagem;
+}
+
+@keyframes muda_imagem {
+    0%  { background-image: url("../Imagens/Animacao01.jpg")}
+    20% { background-image: url("../Imagens/Animacao02.jpg")}
+    40% { background-image: url("../Imagens/Animacao03.jpg")}
+    60% { background-image: url("../Imagens/Animacao04.jpg")}
+    80% { background-image: url("../Imagens/Animacao05.jpg")}
+    100% {background-image: url("../Imagens/Animacao01.jpg")}
+}
+
+footer {
+    color: midnightblue;
+    background-color: rgba(132, 112, 255, 60%);
+    padding: 15px;
+}
+
+@media (min-width: 768px) {
+    nav {
+        padding: 20px 0px;
+    }
+    ul {
+        padding: 5px;
+    }
+    li {
+        width: 25%;
+        float: left;
+    }
+    li:hover {
+        transform: rotate(-2deg);
+    }
+    a {
+        font-size: 1.25rem;
+    }
+    .destaque {
+        padding: 10px;
+        font-size: 2rem;
+        width: 25%;
+        transition: width 1s;
+    }
+    .destaque:hover {
+        width: 30%;
+    }
+    .conteudo {
+        padding: 70px;
+    }
+    .filmagem {
+        width: 50%;
+    }
+    .quadro_animado {
+        width: 620px;
+        height: 410px;
+    }
+}
